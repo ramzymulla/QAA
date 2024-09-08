@@ -1,0 +1,29 @@
+TrimmomaticPE: Started with arguments:
+ -phred33 -summary trimmerSummary.txt /projects/bgmp/shared/2017_sequencing/demultiplexed/22_3H_both_S16_L008_R1_001.fastq.gz /projects/bgmp/shared/2017_sequencing/demultiplexed/22_3H_both_S16_L008_R2_001.fastq.gz -baseout 22_3H_both_S16_L008.fastq.gz LEADING:3 TRAILING:3 SLIDINGWINDOW:5:15 MINLEN:35
+Multiple cores found: Using 4 threads
+Using templated Output files: 22_3H_both_S16_L008_1P.fastq.gz 22_3H_both_S16_L008_1U.fastq.gz 22_3H_both_S16_L008_2P.fastq.gz 22_3H_both_S16_L008_2U.fastq.gz
+Input Read Pairs: 4050899 Both Surviving: 3901597 (96.31%) Forward Only Surviving: 145024 (3.58%) Reverse Only Surviving: 2902 (0.07%) Dropped: 1376 (0.03%)
+TrimmomaticPE: Completed successfully
+	Command being timed: "trimmomatic PE -phred33 -summary trimmerSummary.txt /projects/bgmp/shared/2017_sequencing/demultiplexed/22_3H_both_S16_L008_R1_001.fastq.gz /projects/bgmp/shared/2017_sequencing/demultiplexed/22_3H_both_S16_L008_R2_001.fastq.gz -baseout 22_3H_both_S16_L008.fastq.gz LEADING:3 TRAILING:3 SLIDINGWINDOW:5:15 MINLEN:35"
+	User time (seconds): 197.62
+	System time (seconds): 4.22
+	Percent of CPU this job got: 211%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:35.50
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 393760
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 42256
+	Voluntary context switches: 47420
+	Involuntary context switches: 242
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 672
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
