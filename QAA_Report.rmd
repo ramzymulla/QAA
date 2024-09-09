@@ -2,12 +2,21 @@
 
 Part 1: Read Quality Distributions
 
+22_3H_both_S16_L008_R1_001:
 ![22_3H R1 FASTQC N Content](./22_3H_both_S16_L008_R1_001_fastqc/per_base_n_content.png)
 ![22_3H R1 FASTQC Q-scores](./22_3H_both_S16_L008_R1_001_fastqc/per_base_quality.png)
+![22_3H R1 Python Q-scores](./Qplotter_out/22_3H_both_S16_L008_R1_001_qmeans.png)
+22_3H_both_S16_L008_R2_001:
 ![22_3H R2 FASTQC N Content](./22_3H_both_S16_L008_R2_001_fastqc/per_base_n_content.png)
 ![22_3H R2 FASTQC Q-scores](./22_3H_both_S16_L008_R2_001_fastqc/per_base_quality.png)
+![22_3H R2 Python Q-scores](./Qplotter_out/22_3H_both_S16_L008_R2_001_qmeans.png)
+23_4A_control_S17_L008_R1_001:
 ![23_4A R1 FASTQC N Content](./23_4A_control_S17_L008_R1_001_fastqc/per_base_n_content.png)
 ![23_4A R1 FASTQC Q-scores](./23_4A_control_S17_L008_R1_001_fastqc/per_base_quality.png)
+![23_4A R1 Python Q-scores](./Qplotter_out/23_4A_control_S17_L008_R1_001_qmeans.png)
+23_4A_control_S17_L008_R2_001:
 ![23_4A R2 FASTQC N Content](./23_4A_control_S17_L008_R2_001_fastqc/per_base_n_content.png)
 ![23_4A R2 FASTQC Q-scores](./23_4A_control_S17_L008_R2_001_fastqc/per_base_quality.png)
+![23_4A R2 Python Q-scores](./Qplotter_out/23_4A_control_S17_L008_R2_001_qmeans.png)
+
 

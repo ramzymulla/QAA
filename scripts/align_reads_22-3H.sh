@@ -1,0 +1,26 @@
+#!/bin/bash
+
+#SBATCH -A bgmp
+#SBATCH -p bgmp
+#SBATCH -c 8
+#SBATCH -t 0-20
+#SBATCH --output=logs/STAR_align22-3H_%j.out
+#SBATCH --error=logs/STAR_align22-3H_%j.err
+#SBATCH --mail-user=rza@uoregon.edu
+#SBATCH --mail-type=ALL
+
+conda activate QAA
+wd="/projects/bgmp/rza/bioinfo/Bi623/QAA/"
+file1="trimmer_out/22_3H_both_S16_L008_1P.fastq.gz"
+file2="trimmer_out/22_3H_both_S16_L008_2P.fastq.gz"
+/usr/bin/time -v STAR \
+--runThreadN 8 \
+--runMode alignReads \
+--outFilterMultimapNmax 3 \
+--outSAMunmapped Within KeepPairs \
+--alignIntronMax 1000000 \
+--alignMatesGapMax 1000000 \
+--readFilesCommand zcat \
+--readFilesIn ${wd}$file1 ${wd}$file2 \
+--genomeDir ${wd}/Mus_musculus.GRCm39.112.STAR_2.7.11b/ \
+--outFileNamePrefix ./aligned/22_3H_both_S16_L008

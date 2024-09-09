@@ -1,0 +1,7 @@
+	/projects/bgmp/rza/miniforge3/envs/QAA/bin/STAR-avx2 --runThreadN 8 --runMode alignReads --outFilterMultimapNmax 3 --outSAMunmapped Within KeepPairs --alignIntronMax 1000000 --alignMatesGapMax 1000000 --readFilesCommand zcat --readFilesIn /projects/bgmp/rza/bioinfo/Bi623/QAA/trimmer_out/23_4A_control_S17_L008_1P.fastq.gz /projects/bgmp/rza/bioinfo/Bi623/QAA/trimmer_out/23_4A_control_S17_L008_2P.fastq.gz --genomeDir /projects/bgmp/rza/bioinfo/Bi623/QAA//Mus_musculus.GRCm39.112.STAR_2.7.11b/ --outFileNamePrefix ./aligned/23_4A_control_S17_L008
+	STAR version: 2.7.11b   compiled: 2024-07-03T14:39:20+0000 :/opt/conda/conda-bld/star_1720017372352/work/source
+Sep 08 13:06:27 ..... started STAR run
+Sep 08 13:06:27 ..... loading genome
+Sep 08 13:06:40 ..... started mapping
+Sep 08 13:11:49 ..... finished mapping
+Sep 08 13:11:49 ..... finished successfully

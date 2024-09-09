@@ -1,5 +1,7 @@
 # other
-logs/bad/*
+logs/bad/
+aligned/
+Mus_musculus.GRCm39.112.STAR_2.7.11b/
 
 # bioinfo files
 *.fastq
