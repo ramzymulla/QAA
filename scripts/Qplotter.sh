@@ -10,9 +10,16 @@
 
 conda activate base
 
-fnames="23_4A_control_S17_L008_R2_001.fastq.gz"
+fnames="22_3H_both_S16_L008_R1_001.fastq.gz,
+22_3H_both_S16_L008_R2_001.fastq.gz,
+23_4A_control_S17_L008_R1_001.fastq.gz,
+23_4A_control_S17_L008_R2_001.fastq.gz"
 
-/usr/bin/time -v python ./scripts/Qdists.py \
+for f in $fnames
+do
+    /usr/bin/time -v python ./scripts/Qplot.py \
 -p /projects/bgmp/shared/2017_sequencing/demultiplexed/ \
--f $fnames \
+-f $f \
 -o ./out/
+done
+

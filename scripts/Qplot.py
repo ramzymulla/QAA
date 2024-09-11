@@ -68,6 +68,7 @@ def q_plotter(fname: str, path: str, outpath: str, phred=33):
     plt.title("Mean Q-Scores by Base Pair #")
     plt.xlabel("Base Pair #")
     plt.ylabel("Mean Q-Score")
+    plt.ylim(0,45)
     plt.savefig(f"{outpath+fname.split('.')[0]}_qmeans")
     plt.clf()
 
