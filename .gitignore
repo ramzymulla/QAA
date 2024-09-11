@@ -2,6 +2,9 @@
 logs/bad/
 aligned/
 Mus_musculus.GRCm39.112.STAR_2.7.11b/
+cutadapt_out/
+trimmer_out/
+Answers.md
 
 # bioinfo files
 *.fastq
