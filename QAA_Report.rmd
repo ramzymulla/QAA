@@ -3,7 +3,7 @@ output:
   pdf_document: default
   html_document: default
 ---
-# Ramzy Al-Mulla QAA Assignment Report
+# Ramzy Al-Mulla QAA Report
 
 ## Part 1: Read Quality Distributions
 
@@ -17,47 +17,46 @@ mean quality scores are more or less in agreement, at least visually.
 ### Figure 1: FASTQC and mapcount.py plots for each library. 
 All libraries had reasonablly high mean quality scores, particularly at base pair #'s larger than 5. They also all had very low N content, indicating low ambiguity rates. This suggests the libraries are of sufficient quality to conduct futher analysis.
 
-22_3H_both_S16_L008_R1_001:
+
+### 22_3H_both_S16_L008_R1_001:
 
 FASTQC
 
 ![22_3H R1 FASTQC Q-scores](./22_3H_both_S16_L008_R1_001_fastqc/per_base_quality.png){width=310px} ![22_3H R1 FASTQC N Content](./22_3H_both_S16_L008_R1_001_fastqc/per_base_n_content.png){width=310px} 
-
-Python 
+Python
 
 ![22_3H R1 Python Q-scores](./Qplotter_out/22_3H_both_S16_L008_R1_001_qmeans.png){width=310px}
+\newpage
 
-22_3H_both_S16_L008_R2_001:
+### 22_3H_both_S16_L008_R2_001:
 
 FASTQC 
 
 ![22_3H R2 FASTQC Q-scores](./22_3H_both_S16_L008_R2_001_fastqc/per_base_quality.png){width=310px} ![22_3H R2 FASTQC N Content](./22_3H_both_S16_L008_R2_001_fastqc/per_base_n_content.png){width=310px}
-
 Python 
 
 ![22_3H R2 Python Q-scores](./Qplotter_out/22_3H_both_S16_L008_R2_001_qmeans.png){width=310px}
+\newpage
 
-23_4A_control_S17_L008_R1_001:
+### 23_4A_control_S17_L008_R1_001:
 
 FASTQC 
 
 ![23_4A R1 FASTQC Q-scores](./23_4A_control_S17_L008_R1_001_fastqc/per_base_quality.png){width=310px} ![23_4A R1 FASTQC N Content](./23_4A_control_S17_L008_R1_001_fastqc/per_base_n_content.png){width=310px}
-
 Python
 
 ![23_4A R1 Python Q-scores](./Qplotter_out/23_4A_control_S17_L008_R1_001_qmeans.png){width=310px}
+\newpage
 
-23_4A_control_S17_L008_R2_001:
+### 23_4A_control_S17_L008_R2_001:
 
 FASTQC 
 
 ![23_4A R2 FASTQC Q-scores](./23_4A_control_S17_L008_R2_001_fastqc/per_base_quality.png){width=310px} ![23_4A R2 FASTQC N Content](./23_4A_control_S17_L008_R2_001_fastqc/per_base_n_content.png){width=310px} 
-
 Python 
 
 ![23_4A R2 Python Q-scores](./Qplotter_out/23_4A_control_S17_L008_R2_001_qmeans.png){width=310px}
-
-
+\
 
 ## Part 2
 
@@ -81,8 +80,6 @@ These showed that the adapters tend to be towards the end of the reads. Searchin
 For both samples, read 2 were more extensively trimmed than read 1. I do not expect this to be due to adapter trimming, however, since both reads had similar numbers of sequences containing the full adapter. From the FASTQC quality plots (see figure 1), it appears that read 2 in both samples has substantially more variability in read quality. Thus, the difference between the trimmed length distributions of reads 1 and 2 is likely due to quality trimming rather than adapter trimming.
 
 ![22_3H Length Distributions](./22_3H_both_S16_L008_trimmed_lengths.png){width=310px} ![23_4A Length Distributions](./23_4A_control_S17_L008_trimmed_lengths.png){width=310px}
-
-
 
 ## Part 3
 
