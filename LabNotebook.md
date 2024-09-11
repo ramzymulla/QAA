@@ -3,7 +3,9 @@
 ## Date: 2024-09-03
 
 ### Objective
-
+- Plot Quality scores using FASTQC and python
+- Conduct adapter and quality trimming
+- Compare final read length distributions
 ### Methods
 Paths for my data files:
 ```
@@ -80,12 +82,11 @@ Command being timed: "fastqc /projects/bgmp/shared/2017_sequencing/demultiplexed
 ```
 
 ### Next Steps
-
+- Verify adaptors
+- Run cutadapt and trimmomatic
 ---
 
 ## Date: 2024-09-07
-
-### Objective
 
 ### Methods
 - Ran the following bash commands to verify adapters
@@ -242,17 +243,12 @@ $ python ./scripts/mapcount.py -f ./aligned/23_4A_control_S17_L008Aligned.out.sa
 mapped: 79158404, unmapped: 4993880, total: 84152284
 ```
 
-### Next Steps
 
 ---
+## Date: 2024-09-08~10
 
-## Date: YYYY-MM-DD
-
-### Objective
-
-### Methods
-
-### Next Steps
+Wrote up lab report, made plots pretty, cleaned up repository, and submitted assignment 
 
 ---
+# Done
 
