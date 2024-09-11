@@ -1,22 +1,30 @@
-# QAA Assignment Report
+# Ramzy Al-Mulla QAA Assignment Report
 
-Part 1: Read Quality Distributions
+## Part 1: Read Quality Distributions
 
-22_3H_both_S16_L008_R1_001:
-![22_3H R1 FASTQC N Content](./22_3H_both_S16_L008_R1_001_fastqc/per_base_n_content.png)
-![22_3H R1 FASTQC Q-scores](./22_3H_both_S16_L008_R1_001_fastqc/per_base_quality.png)
+### 22_3H_both_S16_L008_R1_001:
+![22_3H R1 FASTQC N Content](./22_3H_both_S16_L008_R1_001_fastqc/per_base_n_content.png){width=310px} ![22_3H R1 FASTQC Q-scores](./22_3H_both_S16_L008_R1_001_fastqc/per_base_quality.png){width=310px}
+
 ![22_3H R1 Python Q-scores](./Qplotter_out/22_3H_both_S16_L008_R1_001_qmeans.png)
-22_3H_both_S16_L008_R2_001:
-![22_3H R2 FASTQC N Content](./22_3H_both_S16_L008_R2_001_fastqc/per_base_n_content.png)
-![22_3H R2 FASTQC Q-scores](./22_3H_both_S16_L008_R2_001_fastqc/per_base_quality.png)
+### 22_3H_both_S16_L008_R2_001:
+![22_3H R2 FASTQC N Content](./22_3H_both_S16_L008_R2_001_fastqc/per_base_n_content.png) ![22_3H R2 FASTQC Q-scores]{width=310px} (./22_3H_both_S16_L008_R2_001_fastqc/per_base_quality.png){width=310px}
 ![22_3H R2 Python Q-scores](./Qplotter_out/22_3H_both_S16_L008_R2_001_qmeans.png)
-23_4A_control_S17_L008_R1_001:
-![23_4A R1 FASTQC N Content](./23_4A_control_S17_L008_R1_001_fastqc/per_base_n_content.png)
-![23_4A R1 FASTQC Q-scores](./23_4A_control_S17_L008_R1_001_fastqc/per_base_quality.png)
+### 23_4A_control_S17_L008_R1_001:
+![23_4A R1 FASTQC N Content](./23_4A_control_S17_L008_R1_001_fastqc/per_base_n_content.png){width=310px} ![23_4A R1 FASTQC Q-scores](./23_4A_control_S17_L008_R1_001_fastqc/per_base_quality.png){width=310px}
+
 ![23_4A R1 Python Q-scores](./Qplotter_out/23_4A_control_S17_L008_R1_001_qmeans.png)
-23_4A_control_S17_L008_R2_001:
-![23_4A R2 FASTQC N Content](./23_4A_control_S17_L008_R2_001_fastqc/per_base_n_content.png)
-![23_4A R2 FASTQC Q-scores](./23_4A_control_S17_L008_R2_001_fastqc/per_base_quality.png)
-![23_4A R2 Python Q-scores](./Qplotter_out/23_4A_control_S17_L008_R2_001_qmeans.png)
+### 23_4A_control_S17_L008_R2_001:
+FASTQC
+![23_4A R2 FASTQC N Content](./23_4A_control_S17_L008_R2_001_fastqc/per_base_n_content.png){width=310px} ![23_4A R2 FASTQC Q-scores](./23_4A_control_S17_L008_R2_001_fastqc/per_base_quality.png){width=310px}
 
+Python
+![23_4A R2 Python Q-scores](./Qplotter_out/23_4A_control_S17_L008_R2_001_qmeans.png){width=310px}
 
+## Part 2
+
+![22_3H Length Distributions](./22_3H_both_S16_L008_trimmed_lengths.png){width=310px} ![23_4A Length Distributions](./23_4A_control_S17_L008_trimmed_lengths.png){width=310px}
+
+Demonstrate convincingly whether or not the data are from "strand-specific" RNA-Seq libraries. Include any comands/scripts used. Briefly describe your evidence, using quantitative statements (e.g. "I propose that these data are/are not strand-specific, because X% of the reads are y, as opposed to z.").
+
+These data are most likely from strand-specific RNA-Seq libraries because the vast majority of mapped reads are
+from 

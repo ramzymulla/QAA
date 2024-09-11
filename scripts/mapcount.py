@@ -30,5 +30,5 @@ with open(FILE,'r') as f:
                     unmapped += 1
                 
         line = f.readline().strip().split()
-print(f"mapped: {mapped}, unmapped: {unmapped}")
+print(f"mapped: {mapped}, unmapped: {unmapped}, total: {mapped+unmapped}")
 

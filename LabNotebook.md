@@ -122,7 +122,12 @@ TrimmomaticPE: Completed successfully
 	Percent of CPU this job got: 211%
 	Elapsed (wall clock) time (h:mm:ss or m:ss): 16:29.23
 ```
+- Wrote and ran [ldist.py](./scripts/ldist.py) to map trimmed read lengths and ran on each pair of reads
+```
+$ python scripts/ldist.py -1 ./trimmer_out/22_3H_both_S16_L008_1P.fastq.gz -2 ./trimmer_out/22_3H_both_S16_L008_2P.fastq.gz -p ./ -o 22_3H_both_S16_L008 -t 22_3H_both_S16_L008
 
+$ python scripts/ldist.py -1 ./trimmer_out/23_4A_control_S17_L008_1P.fastq.gz -2 ./trimmer_out/23_4A_control_S17_L008_2P.fastq.gz -p ./ -o 23_4A_control_S17_L008 -t 23_4A_control_S17_L008
+```
 ### Next Steps
 
 ---
@@ -178,10 +183,10 @@ Command being timed: "STAR --runThreadN 8 --runMode alignReads --outFilterMultim
 - Ran [mapcount.py](./scripts/mapcount.py) (copied from .../PS8/PS8.py) on each aligned SAM file
 ```
 $ python ./scripts/mapcount.py -f ./aligned/22_3H_both_S16_L008Aligned.out.sam
-mapped: 7621872, unmapped: 181322
+mapped: 7621872, unmapped: 181322, total: 7803194
 
 $ python ./scripts/mapcount.py -f ./aligned/23_4A_control_S17_L008Aligned.out.sam
-mapped: 79158404, unmapped: 4993880
+mapped: 79158404, unmapped: 4993880, total: 84152284
 ```
 - Submitted sbatch scripts for htseq-count commands
 ```
@@ -208,7 +213,7 @@ Command being timed: "htseq-count --stranded=reverse /projects/bgmp/rza/bioinfo/
 	Percent of CPU this job got: 99%
 	Elapsed (wall clock) time (h:mm:ss or m:ss): 54:39.89
 ```
-- Summed up map counts using awk:
+- Summed up htseq counts with the following bash commands:
 ```
 $ cat htseq22-3H_fw.txt | grep -v "__" | awk '{sum+=$2} END {print sum}'
 142603
@@ -216,6 +221,8 @@ $ cat htseq22-3H_rv.txt | grep -v "__" | awk '{sum+=$2} END {print sum}'
 3370858
 $ cat htseq22-3H_*.txt | grep -v "__" | awk '{sum+=$2} END {print sum}'
 3513461
+$ cat htseq22-3H*.txt | awk '{sum += $2} END {print sum}'
+7803194
 
 $ cat htseq23-4A_fw.txt | grep -v "__" | awk '{sum += $2} END {print sum}' 
 1324268
@@ -223,13 +230,18 @@ $ cat htseq23-4A_rv.txt | grep -v "__" | awk '{sum += $2} END {print sum}'
 32827759
 $ cat htseq23-4A_*.txt | grep -v "__" | awk '{sum += $2} END {print sum}' 
 34152027
+$ cat htseq23-4A_*.txt | awk '{sum += $2} END {print sum}'
+84152284
 ```
-- Wrote [ldist.py](./scripts/ldist.py) to map trimmed read lengths and ran on each pair of reads
-```
-$ python scripts/ldist.py -1 ./trimmer_out/22_3H_both_S16_L008_1P.fastq.gz -2 ./trimmer_out/22_3H_both_S16_L008_2P.fastq.gz -p ./ -o 22_3H_both_S16_L008 -t 22_3H_both_S16_L008
 
-$ python scripts/ldist.py -1 ./trimmer_out/23_4A_control_S17_L008_1P.fastq.gz -2 ./trimmer_out/23_4A_control_S17_L008_2P.fastq.gz -p ./ -o 23_4A_control_S17_L008 -t 23_4A_control_S17_L008
 ```
+$ python ./scripts/mapcount.py -f ./aligned/22_3H_both_S16_L008Aligned.out.sam
+mapped: 7621872, unmapped: 181322, total: 7803194
+
+$ python ./scripts/mapcount.py -f ./aligned/23_4A_control_S17_L008Aligned.out.sam
+mapped: 79158404, unmapped: 4993880, total: 84152284
+```
+
 ### Next Steps
 
 ---

@@ -47,8 +47,8 @@ for i in range(len(ldists[0])):
     else: break
 xlow = (xlow//10)*10 
 x_ax = np.arange(len(ldists[0]))
-plt.bar(x_ax-0.2,ldists[0],0.4,color="black",label="Read 1")
-plt.bar(x_ax+0.2,ldists[1],0.4,color="magenta",label = "Read 2")
+plt.bar(x_ax-0.25,ldists[0],0.5,color="coral",label="Read 1")
+plt.bar(x_ax+0.25,ldists[1],0.5,color="steelblue",label = "Read 2")
 plt.xlabel("Read Length (bp)")
 plt.ylabel("Frequency")
 plt.yscale("log")
